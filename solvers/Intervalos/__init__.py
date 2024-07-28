@@ -1,0 +1,1 @@
+from solvers.Intervalos.normal import *
