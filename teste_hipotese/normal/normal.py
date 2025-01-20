@@ -209,9 +209,9 @@ class Normal:
     def __init__(self, serie:np.ndarray|pd.Series|list|tuple|set, media_pop:float=None, desvio_pop:float=None):
         self.serie = pd.Series(serie)
 
-        self.x_ = 5.4 #self.serie.mean()
-        self.s = 1.8  #self.serie.std()
-        self.N = 20 #len(self.serie.index)
+        self.x_ = self.serie.mean()
+        self.s = self.serie.std()
+        self.N = len(self.serie.index)
 
         self.mi = media_pop
         self.sigma = desvio_pop
